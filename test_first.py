@@ -3,4 +3,4 @@ import first
 
 print("Hello test")
 if True:
-  print("Hello again")
+  print("Hello again 2")
