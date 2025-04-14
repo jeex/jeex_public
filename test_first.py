@@ -1,6 +1,11 @@
 import unittest
 import first
 
-print("Hello test")
-if True:
-  print("Hello again 2")
+class Testing(unittest.TestCase):
+    def test_one(self):
+        ok = 6
+        result = first.plus(2, 4)
+        self.assertEqual(ok, result)
+
+if __name__ == '__main__':
+    unittest.main()
