@@ -2,6 +2,9 @@ import sys
 from base_test import BaseTest
 
 class RunTest(BaseTest):
+	def mandatory_functions(self):
+		return ['plus', 'minus', 'sul', 'fromargs', 'frominput', 'tooutput', 'bodexit']
+
 	# ordering by alphabet
 	def test_a_plus(self):
 		funcname = 'plus'
