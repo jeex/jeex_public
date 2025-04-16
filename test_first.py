@@ -5,28 +5,31 @@ class RunTest(BaseTest):
 	# ordering by alphabet
 	def test_a_plus(self):
 		funcname = 'plus'
-		testname = ''
+		testname = f'This function receives two numbers as paramaters a and b, it returns the sum of a + b.'
 		expected = 5
 		parameters = (2, 3)
 		comargs = []
 		self.assert_params_comargs(funcname, testname, expected, parameters, comargs)
-		expected = -11
+		expected = -12
 		parameters = (-20, 9)
 		self.assert_params_comargs(funcname, testname, expected, parameters, comargs)
 
 	def test_b_sul(self):
 		funcname = 'sul'
-		testname = ''
+		testname = 'This function should catch the ZeroDivisionError exception and return 0, if trying to divide by zero.'
 		expected = 3
 		parameters = (3, 1)
 		comargs = []
 		self.assert_params_comargs(funcname, testname, expected, parameters, comargs)
+		expected = 0
+		parameters = (3, 0)
+		self.assert_params_comargs(funcname, testname, expected, parameters, comargs)
 
 	def test_c_sul_nul(self):
 		funcname = 'sul'
-		testname = ''
-		expected = 'ZeroDivisionError'
-		parameters = (3, 0)
+		testname = 'This function should catch the ZeroDivisionError exception and return 0, if trying to divide by zero.'
+		expected =  'ZeroDivisionError'
+		parameters = (4, 0)
 		comargs = []
 		# self.btc.assert_params_comargs(funcname, testname, expected, parameters, comargs)
 		self.raise_error(funcname, testname, expected, parameters, comargs)
