@@ -13,7 +13,7 @@ class RunTest(BaseTest):
 		parameters = (2, 3)
 		comargs = []
 		self.assert_params_comargs(funcname, testname, expected, parameters, comargs)
-		expected = -12
+		expected = -11
 		parameters = (-20, 9)
 		self.assert_params_comargs(funcname, testname, expected, parameters, comargs)
 
@@ -24,7 +24,7 @@ class RunTest(BaseTest):
 		parameters = (3, 1)
 		comargs = []
 		self.assert_params_comargs(funcname, testname, expected, parameters, comargs)
-		expected = 0
+		expected = 'ZeroDivisionError'
 		parameters = (3, 0)
 		self.assert_params_comargs(funcname, testname, expected, parameters, comargs)
 
