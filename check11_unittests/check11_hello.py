@@ -16,7 +16,7 @@ class RunTest(BaseTest):
 	def test_say_hello(self):
 		funcname = 'say_hello'
 		expected = 'Sjakie'
-		parameters = (expected,)
+		parameters = (expected)
 		comargs = []
 		eruit = expected
 		testname = f' where prompt output should be "{eruit}"'
